@@ -3,6 +3,8 @@
 *.class
 *.war
 *.ear
+*.bat
+*.keystore
 hs_err_pid*
 
 ## GWT
