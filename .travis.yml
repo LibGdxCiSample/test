@@ -8,3 +8,5 @@ before_install:
   - chmod +x gradlew
 
 script: ./gradlew clean build
+
+#get in contact with @rultor
