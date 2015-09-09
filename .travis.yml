@@ -14,7 +14,6 @@ script: ./gradlew clean build
 #Source: http://docs.travis-ci.com/user/deployment/releases/
 deploy:
   provider: releases
-  api_key: "010ad66a9b84cc7764a4b5d9cf3c2fe50ae69686"
   file: "android-debug.apk"
 # - "android-release-unsigned.apk"
   skip_cleanup: true
