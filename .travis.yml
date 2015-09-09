@@ -1,4 +1,6 @@
 #Source: https://github.com/DaanVanYperen/libgdx-artemis-quickstart/blob/master/.travis.yml
+#YAML OK with: http://lint.travis-ci.org/ (see: http://docs.travis-ci.com/user/travis-lint/)
+#YAML OK with: http://www.yamllint.com/
 language: android
 android:
   components:
@@ -13,9 +15,8 @@ script: ./gradlew clean build
 deploy:
   provider: releases
   api_key: "010ad66a9b84cc7764a4b5d9cf3c2fe50ae69686"
-  file: 
-	- "android-debug.apk"
-	- "android-release-unsigned.apk"
+  file: "android-debug.apk"
+# - "android-release-unsigned.apk"
   skip_cleanup: true
   on:
     tags: true

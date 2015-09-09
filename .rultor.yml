@@ -1,0 +1,18 @@
+#Parameters for Rultor merge/deploy/release tool
+#See: http://doc.rultor.com/reference.html, https://github.com/yegor256/rultor/blob/master/.rultor.yml, https://github.com/LibGdxCiSample/test/blob/master/.travis.yml
+#YAML OK with: http://www.yamllint.com/
+install:
+  - "sudo apt-get install gradle-2.4"
+architect:
+  - nicofr69
+docker:
+  image: "ubuntu:12.10"
+merge:
+  fast-forward: only
+  rebase: true
+  script: |-
+    - "chmod +x gradlew"
+    - "./gradlew clean build"
+  commanders:
+  - nicofr69
+  
