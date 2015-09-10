@@ -2,7 +2,7 @@
 #See: http://doc.rultor.com/reference.html, https://github.com/yegor256/rultor/blob/master/.rultor.yml, https://github.com/LibGdxCiSample/test/blob/master/.travis.yml
 #YAML OK with: http://www.yamllint.com/
 install:
-  - "sudo apt-get install gradle-2.4"
+  - sudo apt-get install gradle-2.4
 architect:
   - nicofr69
 docker:
