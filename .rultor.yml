@@ -5,8 +5,7 @@ install:
   - sudo apt-get install gradle-2.4
 architect:
   - nicofr69
-docker:
-  image: "ubuntu:12.10"
+# just remove the definition of the image. The default one will be used, which is based on Ubuntu 14.04
 merge:
   fast-forward: only
   rebase: true
