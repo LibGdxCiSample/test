@@ -19,6 +19,18 @@ deploy:
         - "android-debug.apk"
         - "android-release-unsigned.apk"
   skip_cleanup: true
-  on:
-    tags: true
-    
+#Source: http://docs.travis-ci.com/user/uploading-artifacts/
+addons:
+  artifacts: true
+  s3_region: "us-west-1" # defaults to "us-east-1"
+#Source: http://docs.travis-ci.com/user/uploading-artifacts/
+#Adapted to libgdx
+addons:
+  artifacts:
+    # relative path to APK, WAR, (TBD: IPA)
+    paths:
+    - $(ls /android/build/outputs/apk/*.apk | tr "\n" ":")
+    - $(ls /html/build/libs/*.war | tr "\n" ":")
+#    - $(git ls-files -o | tr "\n" ":")
+#    - $(ls /var/log/*.log | tr "\n" ":")    
+#    - $HOME/some/other/thing.log
