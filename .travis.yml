@@ -19,6 +19,8 @@ deploy:
         - "android-debug.apk"
         - "android-release-unsigned.apk"
   skip_cleanup: true
+  on:
+    tags: true
 #Source: http://docs.travis-ci.com/user/uploading-artifacts/
 addons:
   artifacts: true
